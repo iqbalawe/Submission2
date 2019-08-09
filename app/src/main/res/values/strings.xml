@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Submission 2</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="title">Title</string>
+    <string name="overview">Overview</string>
+    <string name="cast">Cast</string>
+    <string name="genre">Genre</string>
+    <string name="runtime">Runtime</string>
+    <string name="language">Language</string>
+
+    <string-array name="data_movie_title">
+        <item>Alita: Battle Angel</item>
+        <item>Aquaman</item>
+        <item>Bohemian Rhapsody</item>
+        <item>Creed II</item>
+        <item>Fantastic Beasts: The Crimes of Grindelwald</item>
+        <item>Glass</item>
+        <item>Avengers: Infinity War</item>
+        <item>Ralph Breaks The Internet</item>
+        <item>Robin Hood</item>
+        <item>Spider-Man: Into the Spider Verse</item>
+    </string-array>
+
+    <array name="data_movie_poster">
+        <item>@drawable/poster_alita</item>
+        <item>@drawable/poster_aquaman</item>
+        <item>@drawable/poster_bohemian</item>
+        <item>@drawable/poster_creed</item>
+        <item>@drawable/poster_crimes</item>
+        <item>@drawable/poster_glass</item>
+        <item>@drawable/poster_infinity_war</item>
+        <item>@drawable/poster_ralph</item>
+        <item>@drawable/poster_robin_hood</item>
+        <item>@drawable/poster_spiderman</item>
+    </array>
+
+</resources>
