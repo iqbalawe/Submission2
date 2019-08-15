@@ -4,66 +4,32 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Movie implements Parcelable {
+    private String name, desc;
+    private int photo;
 
-    private int poster;
-    private String title, overview, runtime, genre, cast, language;
-
-    public int getPoster() {
-        return poster;
+    public String getName() {
+        return name;
     }
 
-    public void setPoster(int poster) {
-        this.poster = poster;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getTitle() {
-        return title;
+    public String getDesc() {
+        return desc;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 
-    public String getOverview() {
-        return overview;
+    public int getPhoto() {
+        return photo;
     }
 
-    public void setOverview(String overview) {
-        this.overview = overview;
+    public void setPhoto(int photo) {
+        this.photo = photo;
     }
-
-    public String getRuntime() {
-        return runtime;
-    }
-
-    public void setRuntime(String runtime) {
-        this.runtime = runtime;
-    }
-
-    public String getGenre() {
-        return genre;
-    }
-
-    public void setGenre(String genre) {
-        this.genre = genre;
-    }
-
-    public String getCast() {
-        return cast;
-    }
-
-    public void setCast(String cast) {
-        this.cast = cast;
-    }
-
-    public String getLanguage() {
-        return language;
-    }
-
-    public void setLanguage(String language) {
-        this.language = language;
-    }
-
 
     @Override
     public int describeContents() {
@@ -72,26 +38,18 @@ public class Movie implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(this.poster);
-        dest.writeString(this.title);
-        dest.writeString(this.overview);
-        dest.writeString(this.runtime);
-        dest.writeString(this.genre);
-        dest.writeString(this.cast);
-        dest.writeString(this.language);
+        dest.writeString(this.name);
+        dest.writeString(this.desc);
+        dest.writeInt(this.photo);
     }
 
     public Movie() {
     }
 
     protected Movie(Parcel in) {
-        this.poster = in.readInt();
-        this.title = in.readString();
-        this.overview = in.readString();
-        this.runtime = in.readString();
-        this.genre = in.readString();
-        this.cast = in.readString();
-        this.language = in.readString();
+        this.name = in.readString();
+        this.desc = in.readString();
+        this.photo = in.readInt();
     }
 
     public static final Parcelable.Creator<Movie> CREATOR = new Parcelable.Creator<Movie>() {
